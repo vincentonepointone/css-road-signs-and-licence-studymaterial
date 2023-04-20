@@ -4,7 +4,7 @@ body {
 }
 /* Set cSize and containers, signs-figures and text will scale in preportion to each other vw px work! */
 :root {
-  --cSize: 200px;
+  --cSize: 20vw;
   --signFontSize: calc(var(--cSize)/6);
 }
  
@@ -54,9 +54,9 @@ body {
   display: block;
 }
 .circle {
-  width: 50%;
-  height: 50%;
-  border-radius: 100%;
+  width: calc(var(--cSize)/2);
+  height: calc(var(--cSize)/2);
+  border-radius: var(--cSize);
   border: 0.5px solid white;
   display: flex;
   align-items: center;
@@ -140,23 +140,23 @@ body {
 }
 .blue {
   background: blue;
-  outline: 0.5px solid blue;
-  border: 5px solid white;
+  outline: calc(var(--cSize)/100) solid blue;
+  border: calc(var(--cSize)/80) solid white;
 }
 
 .red {
   background: red;
-  outline: 0.5px solid red;
+  outline: calc(var(--cSize)/100) solid red;
 }
 
 .white {
   background: white;
-  border: 4px solid red;
+  border: calc(var(--cSize)/40) solid red;
 }
 
 .yellow {
   background: yellow;
-  border: 8px solid red;
+  border: calc(var(--cSize)/40) solid red;
 }
 
 .sign-text-white {

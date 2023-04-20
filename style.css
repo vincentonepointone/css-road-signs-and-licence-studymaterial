@@ -47,6 +47,7 @@ body {
   display: none;
   margin: calc(var(--cSize)/20);
   line-height: calc(var(--cSize)/16);
+  font-size: calc(var(--signFontSize)/2);
   text-align: center;
   text-transform: capitalize;
 }

@@ -2,9 +2,26 @@ body {
   background: rgb(126, 121, 121);
   font-family: roboto;
 }
-
+/* Set cSize and containers, signs-figures and text will scale in preportion to each other vw px work! */
 :root {
-  --cSize: 25vw;
+  --cSize: 200px;
+  --signFontSize: calc(var(--cSize)/6);
+}
+ 
+.sign-grid   * {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
 }
 
 .sign-grid {
@@ -28,8 +45,8 @@ body {
 
 .sign-caption {
   display: none;
-  margin: 4px;
-  line-height: 0.9em;
+  margin: calc(var(--cSize)/20);
+  line-height: calc(var(--cSize)/16);
   text-align: center;
   text-transform: capitalize;
 }
@@ -96,7 +113,7 @@ body {
   height: calc(var(--cSize)/2.15);
 }
 .octagon div p {
-  font-size: calc(var(--cSize / 10px));
+  font-size: var(--signFontSize);
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
   transform: rotate(135deg);
@@ -144,14 +161,14 @@ body {
 
 .sign-text-white {
   color: white;
-  font-size: 2rem;
+  font-size: var(--signFontSize);
   font-weight: 600;
   letter-spacing: 0.0000001rem;
 }
 
 .sign-text-black {
   color: black;
-  font-size: 2em;
+  font-size: var(--signFontSize);
   font-weight: 600;
   letter-spacing: 0.0000001rem;
 }
@@ -160,37 +177,30 @@ body {
   width: 70%;
   background: white;
 }
-
-.red-cross::after {
+.red-cross::before, .red-cross::after {
   content: "";
   display: block;
-  width: 100px;
-  height: 150px;
   background: red;
-  background: red;
-  transform: rotate(-45deg);
   position: relative;
-  right: 43%;
   border-radius: 5px;
+  width: calc(var(--cSize)/35);
+  height: calc(var(--cSize)/2.15);
+}
+.red-cross::after {
+  transform: rotate(-45deg);
+  right: 30%;
 }
 
 .red-cross::before {
-  content: "";
-  display: block;
-  width: 100px;
-  height: 150px;
-  background: red;
   transform: rotate(45deg);
-  position: relative;
-  left: 43%;
-  border-radius: 5px;
+  left: 30%;
 }
 
 /* ============================Arrows================================= */
 
 .arrow {
-  width: 30px;
-  height: 30px;
+  width: calc(var(--cSize)/11);
+  height: calc(var(--cSize)/11);
   position: relative;
   display: inline-block;
   margin: 10px 10px;
@@ -205,15 +215,15 @@ body {
 .arrow-up:before {
   border: none;
   background-color: #555;
-  height: 50%;
-  width: 30%;
-  top: 50%;
-  left: 35%;
+  height: calc(var(--cSize)/11);
+  width: calc(var(--cSize)/11);
+  top: 150%;
+  left: 45%;
 }
 
 .arrow-up:after {
   left: 0;
   top: -50%;
-  border-width: 20px 20px;
+  border-width: calc(var(--cSize)/11) calc(var(--cSize)/11);
   border-bottom-color: #555;
 }

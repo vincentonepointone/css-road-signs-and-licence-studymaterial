@@ -46,10 +46,12 @@ body {
 .sign-caption {
   display: none;
   margin: calc(var(--cSize)/20);
-  line-height: calc(var(--cSize)/16);
-  font-size: calc(var(--signFontSize)/2);
+  line-height: calc(var(--cSize)/9);
+  font-size: calc(var(--signFontSize)/1.5);
   text-align: center;
   text-transform: capitalize;
+  position: relative;
+  bottom: 0px;
 }
 .display {
   display: block;
@@ -57,13 +59,46 @@ body {
 .circle {
   width: calc(var(--cSize)/2);
   height: calc(var(--cSize)/2);
-  border-radius: var(--cSize);
+  border-radius:  50%;
   border: 0.5px solid white;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.stop-sign {
+  width: 120px;
+  height: 120px;
+  background-color: red;
+  border: 10px solid white;
+  border-radius: 50%;
+  position: relative;
+}
 
+.stop-sign:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 60px solid white;
+  border-right: 30px solid transparent;
+  border-bottom: 60px solid white;
+  border-left: 30px solid transparent;
+}
+
+.stop-sign:after {
+  content: "STOP";
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 48px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 .octagon div {
   display: flex;
   align-items: center;
@@ -103,8 +138,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: calc(var(--cSize)/2.07);
-  height: calc(var(--cSize)/2.07);
+  width: calc(var(--cSize)/2.06);
+  height: calc(var(--cSize)/2.06);
 }
 .octagon div > div > div > div > div {
   display: flex;
@@ -120,24 +155,24 @@ body {
   transform: rotate(135deg);
 }
 
-.triangle {
+.triangle-red {
   width: 0;
   height: 0;
-  border-left: 2em solid transparent;
-  border-right: 2em solid transparent;
-  border-top: 50px solid red;
+  border-left: calc(var(--cSize)/3) solid transparent;
+  border-right: calc(var(--cSize)/3) solid transparent;
+  border-top: calc(var(--cSize)/2) solid red;
 }
-.triangle::before {
+.triangle-white{
   content: "";
   display: block;
   position: relative;
   width: 0;
   height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 35px solid white;
-  top: -44px;
-  left: -20px;
+  border-left: calc(var(--cSize)/3.8) solid transparent;
+  border-right: calc(var(--cSize)/3.8) solid transparent;
+  border-top: calc(var(--cSize)/2.8) solid blue;
+  bottom: calc(var(--cSize)/2.2);
+  right: calc(var(--cSize)/3.8);
 }
 .blue {
   background: blue;

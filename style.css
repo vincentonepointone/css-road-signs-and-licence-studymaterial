@@ -7,7 +7,11 @@ body {
   --cSize: 20vw;
   --signFontSize: calc(var(--cSize)/6);
 }
- 
+/* Debug mode */
+ /* * {
+  background: rgba(128, 0, 128, 0.486)!important;
+  border: 2px solid rgba(0, 128, 0, 0.527)!important;
+ } */
 .sign-grid   * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -26,9 +30,9 @@ body {
 
 .sign-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 5px;
-  width: calc(var(--cSize) * 3.2);
+  grid-template-columns:  1fr 1fr 1fr;
+  grid-gap: 1px;
+  width: calc(var(--cSize) * 3);
   margin: auto;
 }
 
@@ -65,40 +69,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-.stop-sign {
-  width: 120px;
-  height: 120px;
-  background-color: red;
-  border: 10px solid white;
-  border-radius: 50%;
-  position: relative;
-}
 
-.stop-sign:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-top: 60px solid white;
-  border-right: 30px solid transparent;
-  border-bottom: 60px solid white;
-  border-left: 30px solid transparent;
-}
-
-.stop-sign:after {
-  content: "STOP";
-  position: absolute;
-  top: 40%;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-size: 48px;
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
-}
 .octagon div {
   display: flex;
   align-items: center;
@@ -117,12 +88,21 @@ body {
   background: transparent;
 }
 
-.octagon div > div,
-.octagon div > div > div > div > div > div {
+.red-octagon div > div,
+.red-octagon div > div > div > div > div > div {
   background: red;
 }
-.octagon div > div > div > div {
+.red-octagon div > div > div > div {
   background: white;
+}
+
+.yellow-octagon div > div,
+.yellow-octagon div > div > div > div > div > div {
+  color:black;
+  background: yellow;
+}
+.yellow-octagon div > div > div > div {
+  background: black;
 }
 .octagon div > div,
 .octagon div > div > div > div,
@@ -145,8 +125,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: calc(var(--cSize)/2.15);
-  height: calc(var(--cSize)/2.15);
+  width: calc(var(--cSize)/2.1999);
+  height: calc(var(--cSize)/2.1999);
 }
 .octagon div p {
   font-size: var(--signFontSize);
@@ -154,25 +134,31 @@ body {
   -moz-transform: rotate(135deg);
   transform: rotate(135deg);
 }
-
+.red-square {
+  background:red;
+  padding: 0 3%;
+  color: white;
+  text-align: center;
+  border: calc(var(--cSize)*1/100) solid white;
+  outline: calc(var(--cSize)*1/100) solid red;
+  font-size:calc(var(--signFontSize)/1.5);
+}
 .triangle-red {
   width: 0;
   height: 0;
-  border-left: calc(var(--cSize)/3) solid transparent;
-  border-right: calc(var(--cSize)/3) solid transparent;
-  border-top: calc(var(--cSize)/2) solid red;
+  border-left: calc(var(--cSize)*40/100) solid transparent;
+  border-right: calc(var(--cSize)*40/100) solid transparent;
+  border-top: calc(var(--cSize)*60/100) solid red;
 }
 .triangle-white{
-  content: "";
-  display: block;
   position: relative;
   width: 0;
   height: 0;
-  border-left: calc(var(--cSize)/3.8) solid transparent;
-  border-right: calc(var(--cSize)/3.8) solid transparent;
-  border-top: calc(var(--cSize)/2.8) solid blue;
-  bottom: calc(var(--cSize)/2.2);
-  right: calc(var(--cSize)/3.8);
+  border-left: calc(var(--cSize)*30/100) solid transparent;
+  border-right: calc(var(--cSize)*30/100) solid transparent;
+  border-top: calc(var(--cSize)*45/100) solid white;
+  bottom: calc(var(--cSize)*55/100);
+  right: calc(var(--cSize)*30/100);
 }
 .blue {
   background: blue;

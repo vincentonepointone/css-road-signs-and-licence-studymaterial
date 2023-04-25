@@ -5,14 +5,14 @@ body {
 /* Set cSize and containers, signs-figures and text will scale in preportion to each other vw px work! */
 :root {
   --cSize: 20vw;
-  --signFontSize: calc(var(--cSize)/6);
+  --signFontSize: calc(var(--cSize) / 6);
 }
 /* Debug mode */
- /* * {
+/* * {
   background: rgba(128, 0, 128, 0.486)!important;
   border: 2px solid rgba(0, 128, 0, 0.527)!important;
  } */
-.sign-grid   * {
+.sign-grid * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -30,7 +30,7 @@ body {
 
 .sign-grid {
   display: grid;
-  grid-template-columns:  1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1px;
   width: calc(var(--cSize) * 3);
   margin: auto;
@@ -49,9 +49,9 @@ body {
 
 .sign-caption {
   display: none;
-  margin: calc(var(--cSize)/20);
-  line-height: calc(var(--cSize)/9);
-  font-size: calc(var(--signFontSize)/1.5);
+  margin: calc(var(--cSize) / 20);
+  line-height: calc(var(--cSize) / 9);
+  font-size: calc(var(--signFontSize) / 1.5);
   text-align: center;
   text-transform: capitalize;
   position: relative;
@@ -61,9 +61,9 @@ body {
   display: block;
 }
 .circle {
-  width: calc(var(--cSize)/2);
-  height: calc(var(--cSize)/2);
-  border-radius:  50%;
+  width: calc(var(--cSize) / 2);
+  height: calc(var(--cSize) / 2);
+  border-radius: 50%;
   border: 0.5px solid white;
   display: flex;
   align-items: center;
@@ -76,8 +76,8 @@ body {
   justify-content: center;
   overflow: hidden;
   margin: 0 auto;
-  width: calc(var(--cSize)/2);
-  height: calc(var(--cSize)/2);
+  width: calc(var(--cSize) / 2);
+  height: calc(var(--cSize) / 2);
   color: white;
   font-weight: 500;
 }
@@ -98,7 +98,7 @@ body {
 
 .yellow-octagon div > div,
 .yellow-octagon div > div > div > div > div > div {
-  color:black;
+  color: black;
   background: yellow;
 }
 .yellow-octagon div > div > div > div {
@@ -118,15 +118,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: calc(var(--cSize)/2.06);
-  height: calc(var(--cSize)/2.06);
+  width: calc(var(--cSize) / 2.06);
+  height: calc(var(--cSize) / 2.06);
 }
 .octagon div > div > div > div > div {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: calc(var(--cSize)/2.1999);
-  height: calc(var(--cSize)/2.1999);
+  width: calc(var(--cSize) / 2.1999);
+  height: calc(var(--cSize) / 2.1999);
 }
 .octagon div p {
   font-size: var(--signFontSize);
@@ -135,50 +135,50 @@ body {
   transform: rotate(135deg);
 }
 .red-square {
-  background:red;
+  background: red;
   padding: 0 3%;
   color: white;
   text-align: center;
-  border: calc(var(--cSize)*1/100) solid white;
-  outline: calc(var(--cSize)*1/100) solid red;
-  font-size:calc(var(--signFontSize)/1.5);
+  border: calc(var(--cSize) * 1 / 100) solid white;
+  outline: calc(var(--cSize) * 1 / 100) solid red;
+  font-size: calc(var(--signFontSize) / 1.5);
 }
 .triangle-red {
   width: 0;
   height: 0;
-  border-left: calc(var(--cSize)*40/100) solid transparent;
-  border-right: calc(var(--cSize)*40/100) solid transparent;
-  border-top: calc(var(--cSize)*60/100) solid red;
+  border-left: calc(var(--cSize) * 40 / 100) solid transparent;
+  border-right: calc(var(--cSize) * 40 / 100) solid transparent;
+  border-top: calc(var(--cSize) * 60 / 100) solid red;
 }
-.triangle-white{
+.triangle-white {
   position: relative;
   width: 0;
   height: 0;
-  border-left: calc(var(--cSize)*30/100) solid transparent;
-  border-right: calc(var(--cSize)*30/100) solid transparent;
-  border-top: calc(var(--cSize)*45/100) solid white;
-  bottom: calc(var(--cSize)*55/100);
-  right: calc(var(--cSize)*30/100);
+  border-left: calc(var(--cSize) * 30 / 100) solid transparent;
+  border-right: calc(var(--cSize) * 30 / 100) solid transparent;
+  border-top: calc(var(--cSize) * 45 / 100) solid white;
+  bottom: calc(var(--cSize) * 55 / 100);
+  right: calc(var(--cSize) * 30 / 100);
 }
 .blue {
   background: blue;
-  outline: calc(var(--cSize)/100) solid blue;
-  border: calc(var(--cSize)/80) solid white;
+  outline: calc(var(--cSize) / 100) solid blue;
+  border: calc(var(--cSize) / 80) solid white;
 }
 
 .red {
   background: red;
-  outline: calc(var(--cSize)/100) solid red;
+  outline: calc(var(--cSize) / 100) solid red;
 }
 
 .white {
   background: white;
-  border: calc(var(--cSize)/40) solid red;
+  border: calc(var(--cSize) / 40) solid red;
 }
 
 .yellow {
   background: yellow;
-  border: calc(var(--cSize)/40) solid red;
+  border: calc(var(--cSize) / 40) solid red;
 }
 
 .sign-text-white {
@@ -199,14 +199,15 @@ body {
   width: 70%;
   background: white;
 }
-.red-cross::before, .red-cross::after {
+.red-cross::before,
+.red-cross::after {
   content: "";
   display: block;
   background: red;
   position: relative;
   border-radius: 5px;
-  width: calc(var(--cSize)/35);
-  height: calc(var(--cSize)/2.15);
+  width: calc(var(--cSize) / 35);
+  height: calc(var(--cSize) / 2.15);
 }
 .red-cross::after {
   transform: rotate(-45deg);
@@ -219,33 +220,54 @@ body {
 }
 
 /* ============================Arrows================================= */
-
-.arrow {
-  width: calc(var(--cSize)/11);
-  height: calc(var(--cSize)/11);
-  position: relative;
-  display: inline-block;
-  margin: 10px 10px;
+.arrow-body {
+  background-color: white;
+  height: calc(var(--cSize) / 16);
+  width: calc(var(--cSize) / 2.9);
+  margin-left: 15%;
 }
-.arrow:before, .arrow:after {
+
+.arrow-body:after {
   content: "";
+  display: inline-block;
+  position: relative;
   border-color: transparent;
   border-style: solid;
-  position: absolute;
+  right: calc(var(--cSize) / 5 );
+  bottom: calc(var(--cSize) / 9 );
+  border-width: calc(var(--cSize) / 7);
+  border-bottom-color: white;
+  transform: rotate(-90deg);
 }
 
-.arrow-up:before {
-  border: none;
-  background-color: #555;
-  height: calc(var(--cSize)/11);
-  width: calc(var(--cSize)/11);
-  top: 150%;
-  left: 45%;
+/* ==================One way Signs======================= */
+
+.req {
+  width: calc(var(--cSize) / 1.9);
+  height: calc(var(--cSize) / 2.7);
 }
 
-.arrow-up:after {
-  left: 0;
-  top: -50%;
-  border-width: calc(var(--cSize)/11) calc(var(--cSize)/11);
-  border-bottom-color: #555;
+.one-way {
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.one-way > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(var(--cSize) / 2);
+  height: calc(var(--cSize) / 2.9);
+  outline: calc(var(--cSize) * 1 / 100) solid white;
+  border-radius: 10px;
+}
+
+.one-way-up {
+  rotate: 90deg;
+}
+
+.one-way-right {
+  rotate: 180deg;
 }

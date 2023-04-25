@@ -1,6 +1,6 @@
 body {
   background: rgb(126, 121, 121);
-  font-family: roboto;
+  font-family: roboto!important;
 }
 /* Set cSize and containers, signs-figures and text will scale in preportion to each other vw px work! */
 :root {
@@ -35,8 +35,10 @@ body {
   width: calc(var(--cSize) * 3);
   margin: auto;
 }
-
 .sign-container {
+    border: 2px solid black
+}
+.sign{
   width: var(--cSize);
   height: var(--cSize);
   background: white;
@@ -44,18 +46,19 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 2px solid black;
 }
 
 .sign-caption {
+  background: white;
+  width: 100%;
+  height: calc(var(--cSize) / 1);
+  padding: calc(var(--cSize) * 4 / 100);
+}
+
+.sign-caption-text {
+  margin: 0;
+  font-size: calc(var( --signFontSize)/2);
   display: none;
-  margin: calc(var(--cSize) / 20);
-  line-height: calc(var(--cSize) / 9);
-  font-size: calc(var(--signFontSize) / 1.5);
-  text-align: center;
-  text-transform: capitalize;
-  position: relative;
-  bottom: 0px;
 }
 .display {
   display: block;
@@ -170,7 +173,9 @@ body {
   background: red;
   outline: calc(var(--cSize) / 100) solid red;
 }
-
+.white p {
+  color:black;
+}
 .white {
   background: white;
   border: calc(var(--cSize) / 40) solid red;
@@ -261,7 +266,7 @@ body {
   width: calc(var(--cSize) / 2);
   height: calc(var(--cSize) / 2.9);
   outline: calc(var(--cSize) * 1 / 100) solid white;
-  border-radius: 10px;
+  border-radius: calc(var(--cSize) * 2 / 100);
 }
 
 .one-way-up {

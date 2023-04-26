@@ -50,17 +50,40 @@ body {
   flex-direction: column;
 }
 
+img {
+  width: calc(var(--cSize) / 2)
+}
+
 .sign-caption {
   border-radius: 0 0 10px 10px;
   background: white;
   width:  calc(var(--cSize) * 1.5);
-  height: calc(var(--cSize) *1.3);
+  height: calc(var(--cSize) *2.4);
   padding: calc(var(--cSize) * 4 / 100);
 }
+#showAllButton {
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 1rem;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  cursor: pointer;
+  color: white;
+  background: black;
+  z-index: 100;
+}
 
+#showAllButton:hover {
+  font-size: 1.3rem;
+}
+#showAllButton:active {
+  font-size: 1.4rem;
+}
 .sign-caption-text {
   margin: 0;
-  font-size: calc(var( --signFontSize)/1.5);
+  font-size: calc(var( --signFontSize)/1.4555);
   display: none;
 }
 .display {

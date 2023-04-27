@@ -1,11 +1,15 @@
 body {
-  background: rgb(126, 121, 121);
+  background: rgba(126, 121, 121, 0.336);
   font-family: roboto!important;
 }
 /* Set cSize and containers, signs-figures and text will scale in preportion to each other vw px work! */
 :root {
   --cSize: 10vw;
   --signFontSize: calc(var(--cSize) / 6);
+}
+h3{
+  margin: 4vw;
+  font-size:calc(var(--signFontSize) *1.1);
 }
 /* Debug mode */
 /* * {
@@ -25,19 +29,21 @@ body {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-  cursor: default;
+  cursor: pointer;
 }
 
 .sign-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
   width: calc(var(--cSize) * 8);
   margin: auto;
 }
 .sign-container {
     border: 2px solid black;
     border-radius: 10px;
+    background: white;  
 }
 .sign{
   width: calc(var(--cSize) * 1.5);
@@ -58,7 +64,6 @@ img {
   border-radius: 0 0 10px 10px;
   background: white;
   width:  calc(var(--cSize) * 1.5);
-  height: calc(var(--cSize) *2.4);
   padding: calc(var(--cSize) * 4 / 100);
 }
 #showAllButton {
@@ -73,14 +78,15 @@ img {
   color: white;
   background: black;
   z-index: 100;
+    -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
-#showAllButton:hover {
-  font-size: 1.3rem;
-}
-#showAllButton:active {
-  font-size: 1.4rem;
-}
+
+
 .sign-caption-text {
   margin: 0;
   font-size: calc(var( --signFontSize)/1.4555);
@@ -307,11 +313,14 @@ img {
   --cSize: 30vw;
   --signFontSize: calc(var(--cSize) / 6);
 }
-
+body {
+  margin: 0;
+}
 .sign-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2px;
-  width: calc(var(--cSize) * 3);
+  width: 100vw;
+  margin: 0;
 }
 }
